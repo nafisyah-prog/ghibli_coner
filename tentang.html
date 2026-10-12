@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Ghibli Corner and the contact form.">
+  <title>Ghibli Corner - About Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>☁️ Ghibli Corner</h1>
+    <p>Get to know us and send in your favorite Ghibli movie suggestions.</p>
+    <nav aria-label="Main menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tentang.html" class="active">About Us</a></li>
+        <li><button id="themeToggle" type="button">🌙 Mode</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="fade-in">
+      <h2>About Us</h2>
+      <p>Ghibli Corner is a simple website created by Aisyah Currents, an Information Management student at UNESA, as a Web Programming midterm project. Its goal is to share Studio Ghibli movie recommendations with a calm, light, and easy-to-read design.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="thumb">🎯</div>
+          <h3>Mission</h3>
+          <p>Helping viewers find Ghibli movies that match their favorite genres.</p>
+        </article>
+        <article class="card">
+          <div class="thumb">💡</div>
+          <h3>Technology</h3>
+          <p>Built with plain HTML, CSS, and JavaScript, with no frameworks.</p>
+        </article>
+        <article class="card">
+          <div class="thumb">🚀</div>
+          <h3>Hosting</h3>
+          <p>Published using GitHub Pages.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="fade-in">
+      <h2>Send a Movie Suggestion</h2>
+      <form id="contactForm" novalidate>
+        <div class="field">
+          <label for="nama">Name</label>
+          <input type="text" id="nama" name="nama" placeholder="Your name">
+          <small class="error" id="errNama"></small>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="name@email.com">
+          <small class="error" id="errEmail"></small>
+        </div>
+        <div class="field">
+          <label for="pesan">Movie Suggestion</label>
+          <textarea id="pesan" name="pesan" rows="4" placeholder="Which Ghibli movie should we add?"></textarea>
+          <small class="error" id="errPesan"></small>
+        </div>
+        <button type="submit" class="btn">Send</button>
+        <p id="formSuccess" class="success" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Ghibli Corner. Made for the Web Programming midterm project. A fan site, not affiliated with Studio Ghibli.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ghibli Corner - a relaxed place to find Studio Ghibli movie recommendations.">
+  <title>Ghibli Corner - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>☁️ Ghibli Corner</h1>
+    <p>A relaxed place to discover your favorite Studio Ghibli movies.</p>
+    <nav aria-label="Main menu">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="tentang.html">About Us</a></li>
+        <li><button id="themeToggle" type="button">🌙 Mode</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero fade-in">
+      <h2>Welcome, Ghibli Fan! 🍃</h2>
+      <p id="greeting">Ready to find a movie to watch?</p>
+      <button id="changeQuote" type="button" class="btn">Words of Encouragement</button>
+      <p id="quote" class="quote">"Every journey begins with a small step."</p>
+    </section>
+
+    <section class="fade-in">
+      <h2>Ghibli Movie Recommendations</h2>
+      <div class="filters" role="group" aria-label="Genre filter">
+        <button type="button" class="filter active" data-genre="all">All</button>
+        <button type="button" class="filter" data-genre="fantasy">Fantasy</button>
+        <button type="button" class="filter" data-genre="adventure">Adventure</button>
+        <button type="button" class="filter" data-genre="drama">Drama</button>
+      </div>
+      <p>Your favorites: <strong id="favCount">0</strong></p>
+
+      <div class="grid" id="animeGrid">
+        <article class="card" data-genre="fantasy">
+          <div class="thumb"><img src="spirited_away.jpg" alt="Spirited Away poster" data-emoji="🏮" onerror="this.onerror=null;this.replaceWith(document.createTextNode(this.dataset.emoji))"></div>
+          <h3>Spirited Away</h3>
+          <span class="tag">Fantasy</span>
+          <p>Chihiro gets trapped in the spirit world and must work at a bathhouse to save her parents.</p>
+          <button type="button" class="fav">☆ Favorite</button>
+        </article>
+        <article class="card" data-genre="fantasy">
+          <div class="thumb"><img src="totoro.png" alt="My Neighbor Totoro poster" data-emoji="🌳" onerror="this.onerror=null;this.replaceWith(document.createTextNode(this.dataset.emoji))"></div>
+          <h3>My Neighbor Totoro</h3>
+          <span class="tag">Fantasy</span>
+          <p>Two sisters move to the countryside and befriend the gentle spirits of the forest.</p>
+          <button type="button" class="fav">☆ Favorite</button>
+        </article>
+        <article class="card" data-genre="adventure">
+          <div class="thumb"><img src="kiki.png" alt="Kiki's Delivery Service poster" data-emoji="🧹" onerror="this.onerror=null;this.replaceWith(document.createTextNode(this.dataset.emoji))"></div>
+          <h3>Kiki's Delivery Service</h3>
+          <span class="tag">Adventure</span>
+          <p>A young witch starts a delivery business in a new town and learns to stand on her own.</p>
+          <button type="button" class="fav">☆ Favorite</button>
+        </article>
+        <article class="card" data-genre="adventure">
+          <div class="thumb"><img src="castle.jpg" alt="Castle in the Sky poster" data-emoji="🏰" onerror="this.onerror=null;this.replaceWith(document.createTextNode(this.dataset.emoji))"></div>
+          <h3>Castle in the Sky</h3>
+          <span class="tag">Adventure</span>
+          <p>A quest to find the legendary floating island that hides a great secret.</p>
+          <button type="button" class="fav">☆ Favorite</button>
+        </article>
+        <article class="card" data-genre="drama">
+          <div class="thumb"><img src="whisper.jpg" alt="Whisper of the Heart poster" data-emoji="🎻" onerror="this.onerror=null;this.replaceWith(document.createTextNode(this.dataset.emoji))"></div>
+          <h3>Whisper of the Heart</h3>
+          <span class="tag">Drama</span>
+          <p>A book-loving girl works to make her dream of becoming a writer come true.</p>
+          <button type="button" class="fav">☆ Favorite</button>
+        </article>
+        <article class="card" data-genre="drama">
+          <div class="thumb"><img src="the_wind.jpg" alt="The Wind Rises poster" data-emoji="✈️" onerror="this.onerror=null;this.replaceWith(document.createTextNode(this.dataset.emoji))"></div>
+          <h3>The Wind Rises</h3>
+          <span class="tag">Drama</span>
+          <p>The story of an aircraft designer chasing his dream in difficult times.</p>
+          <button type="button" class="fav">☆ Favorite</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="fade-in">
+      <h2>Movie List from the Internet</h2>
+      <p>Data is fetched live (AJAX) from the Studio Ghibli API.</p>
+      <button id="loadTop" type="button" class="btn">Load Movie List</button>
+      <p id="status" class="status" aria-live="polite"></p>
+      <div class="grid" id="topGrid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Ghibli Corner. Made for the Web Programming midterm project. A fan site, not affiliated with Studio Ghibli.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
